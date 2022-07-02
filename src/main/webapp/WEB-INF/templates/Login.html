@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Login登录界面</title>
+		<link rel="stylesheet" type="text/css" href="css/LoginStyle/LoginStyle.css">
+		<script type="js" src="js/login.js"></script>
+	</head>
+	<body>
+		<div class="login">
+			<img src="img/user1.jpg" class="user">
+			<h1 class="h1">登录账号</h1>
+			<form th:action="@{/LoginModule}" method="post">
+				<p>用户名</p>
+				<input type="text" name="username" placeholder="输入用户名">
+				<p>密码</p>
+				<input type="text" name="password" placeholder="输入密码">
+				<input type="submit" value="登录">
+				<a href="#">忘记密码？</a><br>
+				<a href="#">还没有账户？</a>
+			</form>
+		</div>
+	</body>
+</html>
