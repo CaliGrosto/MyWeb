@@ -21,7 +21,7 @@ public class Hyperlink {
         return "Login";
     }
 
-    @RequestMapping("/List/create")
+    @RequestMapping("/create")
     public String ListCreate(){
         return "create";
     }
@@ -31,7 +31,7 @@ public class Hyperlink {
         return "PluginsList";
     }
 
-    @RequestMapping("/PluginsList/FTB")
+    @RequestMapping("/FTB")
     public String PluginsListFTB(){
         return "FTB";
     }
