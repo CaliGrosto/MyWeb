@@ -6,20 +6,22 @@ import com.diana.MyBatis.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class LoginModule {
 
     @RequestMapping("/LoginModule")
-    public void LoginModuleA(
+    @ResponseBody
+    public String LoginModuleA(
             @RequestParam("username")String username,
             @RequestParam("password")String password
             ){
-        User user = LoginUtils.LoginUtil(username,password);
-        if(user == null){
-            System.out.println("1");
+        User user = LoginUtils.LoginUtil(username, password);
+        if(user != null){
+            return "LoginSuccess";
         }else{
-            System.out.println("2");
+            return "LoginFail";
         }
     }
 }
